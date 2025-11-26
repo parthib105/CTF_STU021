@@ -11,10 +11,7 @@ print(f"Target Hash to find: {myHash}")
 
 # get the data frame
 df_reviews = pd.read_csv("reviews.csv")
-# print(df1.dtypes, "\n")
-
 df_books = pd.read_csv("books.csv")
-# print(df2.dtypes)
 
 # Find books with rating_number = 1234 AND average_rating = 5.0
 candidate_books = df_books[(df_books['rating_number'] == 1234) & (df_books['average_rating'] == 5.0)]
@@ -47,4 +44,5 @@ if not match.empty:
     print(f"FLAG1: {flag_hash}")
     
 else:
+
     print("No reviews found containing the target hash.")
